@@ -21,6 +21,7 @@ export const actions = {
         path: '/',
         maxAge: 60 * 60 * 24 * 7
       })
+      this.$router.push('profile')
       commit('setAuth', true)
     } else {
       commit('setAuthError')

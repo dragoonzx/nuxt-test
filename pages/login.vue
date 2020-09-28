@@ -35,6 +35,7 @@
                     :error="isLoginError"
                     hide-details="auto"
                     @click:append="show1 = !show1"
+                    @keyup.enter="login"
                   />
                   <v-btn
                     class="login__btn"
@@ -63,8 +64,6 @@
           </v-container>
         </v-sheet>
       </v-col>
-    </v-row></v-sheet>
-    </v-col>
     </v-row>
   </v-container>
 </template>
@@ -99,7 +98,7 @@ export default {
         password: this.password
       })
 
-      if (!this.isAuthError) {
+      if (this.isAuthError) {
         this.isLoginError = true
       }
     },

@@ -31,12 +31,8 @@ export default {
   components: {
     NewsItem
   },
-  async asyncData ({ $axios, store }) {
-    const url = 'http://newsapi.org/v2/top-headlines?' +
-          'country=us&' +
-          'apiKey=ba1c568fee4c44fc821c8d95b984c3ad'
-    const { articles } = await $axios.$get(url)
-    store.commit('news/setNews', articles)
+  fetch () {
+    this.$store.dispatch('news/fetchNews')
   },
   computed: {
     articles () {
