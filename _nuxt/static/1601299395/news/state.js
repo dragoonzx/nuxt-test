@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1601299395",layout:"default",error:null,state:{auth:{userName:"Admin",password:"12345",isAuth:a,isAuthError:a},news:{articles:[]}},serverRendered:true,routePath:"\u002Fnews",config:{}}}(false));
